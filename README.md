@@ -1,6 +1,6 @@
 # ProjectName QWERHacks
 
-Nook & Cranny is a mobile service that helps you find and support local businesses in your neighborhood.
+Project Description
 
 ## Group Members
 

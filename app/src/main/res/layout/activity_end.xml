@@ -15,11 +15,11 @@
         android:background="#DAD9D9"
         app:labelVisibilityMode="labeled"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/next_question"
+        app:layout_constraintTop_toBottomOf="@+id/congrats"
         app:menu="@menu/bottom_nav_menu" />
 
     <Button
-        android:id="@+id/next_question"
+        android:id="@+id/congrats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="166dp"

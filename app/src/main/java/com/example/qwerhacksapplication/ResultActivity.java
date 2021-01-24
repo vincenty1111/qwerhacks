@@ -52,12 +52,15 @@ public class ResultActivity extends AppCompatActivity {
                     Button butt2 = findViewById(R.id.Ans2);
                     Button butt3 = findViewById(R.id.Ans3);
                     Button butt4 = findViewById(R.id.Ans4);
+                    Button qnum = findViewById(R.id.number);
+
                     TextView funfact = findViewById(R.id.funfact);
                     TextView percentage = findViewById(R.id.percent);
                     butt1.setText((String) arr.get(0));
                     butt2.setText((String) arr.get(1));
                     butt3.setText((String) arr.get(2));
                     butt4.setText((String) arr.get(3));
+                    qnum.setText("Q" + counter + " of 10");
 
                     funfact.setText(fun.replace("\\n", "\n"));
                     percentage.setText(perc);

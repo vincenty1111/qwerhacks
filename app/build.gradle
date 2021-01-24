@@ -36,6 +36,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:16.0.4'
     implementation 'com.google.firebase:firebase-firestore:22.0.1'
 
+
     'com.google.firebase:firebase-firestore:22.0.0'
 
     // recyclerview

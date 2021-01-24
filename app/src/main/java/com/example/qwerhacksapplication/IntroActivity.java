@@ -13,13 +13,30 @@ public class IntroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
-        Button start = findViewById(R.id.congrats);
-        start.setOnClickListener(new View.OnClickListener() {
+        Button triv = findViewById(R.id.trivia);
+        triv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), TriviaActivity.class);
                 startActivity(intent);
             }
         });
+        Button safe = findViewById(R.id.safespace);
+        safe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ForumActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button hub = findViewById(R.id.QueerHub);
+        safe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), InspoHubActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
 }

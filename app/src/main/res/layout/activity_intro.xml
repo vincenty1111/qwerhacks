@@ -4,16 +4,116 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/gradient_background"
     tools:context=".IntroActivity">
 
     <Button
-        android:id="@+id/congrats"
+        android:id="@+id/trivia"
+        android:layout_width="108dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="488dp"
+        android:background="@drawable/triv_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/quote"
+        android:layout_width="193dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="268dp"
+        android:fontFamily="@font/varela_round"
+        android:text="become the ultimate ally with prism"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcome_quote"
+        android:layout_width="141dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/varela_round"
+        android:text="Welcome!"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/triv_expl"
+        android:layout_width="141dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="576dp"
+        android:fontFamily="@font/varela_round"
+        android:text="Trivia"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/space_expl"
+        android:layout_width="141dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="576dp"
+        android:fontFamily="@font/varela_round"
+        android:text="SafeSpace"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hub_expl"
+        android:layout_width="82dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="576dp"
+        android:fontFamily="@font/varela_round"
+        android:text="QueerHub"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/safespace"
+        android:layout_width="102dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="488dp"
+        android:background="@drawable/safe_space_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/prism"
+        android:layout_width="102dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/coolprism"
+        android:layout_width="208dp"
+        android:layout_height="208dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="216dp"
+        android:background="@drawable/cool_prism"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/QueerHub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="166dp"
-        android:layout_marginTop="267dp"
-        android:text="Click Me"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="476dp"
+        android:background="@drawable/hub_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

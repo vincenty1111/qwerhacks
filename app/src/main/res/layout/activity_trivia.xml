@@ -21,67 +21,94 @@
 
     <TextView
         android:id="@+id/quest1"
-        android:layout_width="204dp"
-        android:layout_height="171dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="72dp"
+        android:layout_width="334dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/rectangle"
+        android:fontFamily="@font/varela_round"
         android:gravity="center"
-        android:background = "@drawable/rectangle"
         android:text="TextView"
+        android:textColor="#7E6B9D"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Ans1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
+        android:layout_width="142dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="316dp"
-        android:background="#D5D2D2"
+        android:background="#FFFFFF"
+        android:fontFamily="@font/varela_round"
         android:text="Ans1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/number"
+        android:layout_width="173dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/darker_purp"
+        android:fontFamily="@font/varela_round"
+        android:text="Number 1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/Ans2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="416dp"
-        android:background="#D5D2D2"
+        android:layout_width="142dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="412dp"
+        android:background="#FFFFFF"
+        android:fontFamily="@font/varela_round"
         android:text="Ans2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Ans3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="272dp"
+        android:layout_width="142dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="228dp"
         android:layout_marginTop="316dp"
-        android:background="#D5D2D2"
+        android:background="#FFFFFF"
+        android:fontFamily="@font/varela_round"
         android:text="Ans3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Ans4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="272dp"
-        android:layout_marginTop="416dp"
-        android:background="#D5D2D2"
+        android:layout_width="142dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="412dp"
+        android:background="#FFFFFF"
+        android:fontFamily="@font/varela_round"
         android:text="Ans4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="488dp"
-        android:text="Submit"
+        android:layout_width="166dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="508dp"
+        android:background="@drawable/submit"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/logo"
+        android:layout_width="91dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

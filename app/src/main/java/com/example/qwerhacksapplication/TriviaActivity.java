@@ -52,10 +52,12 @@ public class TriviaActivity extends AppCompatActivity {
                     Button butt2 = findViewById(R.id.Ans2);
                     Button butt3 = findViewById(R.id.Ans3);
                     Button butt4 = findViewById(R.id.Ans4);
+                    Button qnum = findViewById(R.id.number);
                     butt1.setText((String) arr.get(0));
                     butt2.setText((String) arr.get(1));
                     butt3.setText((String) arr.get(2));
                     butt4.setText((String) arr.get(3));
+                    qnum.setText("Q" + (counter+1) + " of 10");
                 }
             }
         });
@@ -76,9 +78,9 @@ public class TriviaActivity extends AppCompatActivity {
                 Button ans4_butt = TriviaActivity.this.findViewById(R.id.Ans4);
 
                 ans1_butt.setBackgroundColor(Color.parseColor("#B1D7C2"));
-                ans2_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
-                ans3_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
-                ans4_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
+                ans2_butt.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                ans3_butt.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                ans4_butt.setBackgroundColor(Color.parseColor("#FFFFFF"));
             }
         });
 
@@ -90,10 +92,10 @@ public class TriviaActivity extends AppCompatActivity {
                 Button ans3_butt = TriviaActivity.this.findViewById(R.id.Ans3);
                 Button ans4_butt = TriviaActivity.this.findViewById(R.id.Ans4);
 
-                ans1_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
+                ans1_butt.setBackgroundColor(Color.parseColor("#FFFFFF"));
                 ans2_butt.setBackgroundColor(Color.parseColor("#B1D7C2"));
-                ans3_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
-                ans4_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
+                ans3_butt.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                ans4_butt.setBackgroundColor(Color.parseColor("#FFFFFF"));
             }
         });
         ans3.setOnClickListener(new View.OnClickListener() {
@@ -104,10 +106,10 @@ public class TriviaActivity extends AppCompatActivity {
                 Button ans3_butt = TriviaActivity.this.findViewById(R.id.Ans3);
                 Button ans4_butt = TriviaActivity.this.findViewById(R.id.Ans4);
 
-                ans1_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
-                ans2_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
+                ans1_butt.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                ans2_butt.setBackgroundColor(Color.parseColor("#FFFFFF"));
                 ans3_butt.setBackgroundColor(Color.parseColor("#B1D7C2"));
-                ans4_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
+                ans4_butt.setBackgroundColor(Color.parseColor("#FFFFFF"));
             }
         });
         ans4.setOnClickListener(new View.OnClickListener() {
@@ -118,9 +120,9 @@ public class TriviaActivity extends AppCompatActivity {
                 Button ans3_butt = TriviaActivity.this.findViewById(R.id.Ans3);
                 Button ans4_butt = TriviaActivity.this.findViewById(R.id.Ans4);
 
-                ans1_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
-                ans2_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
-                ans3_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
+                ans1_butt.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                ans2_butt.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                ans3_butt.setBackgroundColor(Color.parseColor("#FFFFFF"));
                 ans4_butt.setBackgroundColor(Color.parseColor("#B1D7C2"));
             }
         });

@@ -8,10 +8,12 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import static com.example.qwerhacksapplication.TriviaActivity.counter_var;
+import static com.example.qwerhacksapplication.TriviaActivity.input;
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -22,7 +24,19 @@ public class ResultActivity extends AppCompatActivity {
         final int counter = intent.getIntExtra(counter_var, 0);
         setContentView(R.layout.activity_result);
         createNaviBar();
-        Button button = (Button) findViewById(R.id.next_question);
+
+        final int given = intent.getIntExtra(input, 0);
+        final Long true_ans = intent.getLongExtra("true_answer", 0);
+        System.out.println(true_ans);
+        if (given == true_ans) {
+            TextView corr = ResultActivity.this.findViewById(R.id.right);
+            corr.setVisibility(View.VISIBLE);
+        }
+        else {
+            TextView corr = ResultActivity.this.findViewById(R.id.wrong);
+            corr.setVisibility(View.VISIBLE);
+        }
+        Button button = (Button) findViewById(R.id.congrats);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (counter == 3) {
@@ -56,6 +70,11 @@ public class ResultActivity extends AppCompatActivity {
                     case R.id.botnav_inspiro:
                         Intent intent = new Intent(getApplicationContext(), InspoHubActivity.class);
                         startActivity(intent);
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.botnav_profile:
+                        Intent intent3 = new Intent(getApplicationContext(), ProfileActivity.class);
+                        startActivity(intent3);
                         overridePendingTransition(0, 0);
                         return true;
                 }

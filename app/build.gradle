@@ -34,8 +34,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.google.firebase:firebase-database:16.0.4'
     implementation 'com.google.firebase:firebase-firestore:22.0.1'
-    implementation 'androidx.annotation:annotation:1.1.0'
-    compile 'com.google.firebase:firebase-firestore:22.0.0'
+
+    'com.google.firebase:firebase-firestore:22.0.0'
+
     // recyclerview
     //noinspection GradleCompatible
     implementation 'com.android.support:recyclerview-v7:29.0.2'

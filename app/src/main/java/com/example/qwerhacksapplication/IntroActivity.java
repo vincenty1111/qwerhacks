@@ -13,7 +13,7 @@ public class IntroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
-        Button start = findViewById(R.id.next_question);
+        Button start = findViewById(R.id.congrats);
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

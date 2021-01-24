@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    android:paddingTop="5dp"
-    tools:context=".ForumActivity">
+    tools:context=".ForumResults">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
@@ -16,14 +15,17 @@
         android:background="#DAD9D9"
         app:labelVisibilityMode="labeled"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollView4"
         app:menu="@menu/bottom_nav_menu" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteY="5dp">
+        android:id="@+id/scrollView4"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,7 +34,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="175dp">
+                android:layout_height="175dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
                     android:id="@+id/textView4"
@@ -123,45 +127,35 @@
                 </HorizontalScrollView>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+
             <SearchView
-                android:id="@+id/forum_searchbar"
+                android:id="@+id/results_searchbar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp">
-
-                <ImageView
-                    android:id="@+id/imageView10"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="2dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/trending" />
+                android:layout_height="50dp">
 
                 <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/results_title"
+                    android:layout_width="420dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="52dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="8dp"
                     android:fontFamily="@font/suez_one"
-                    android:text="Trending Posts"
+                    android:text="Search Results"
+                    android:textAlignment="center"
                     android:textColor="#FFFFFF"
-                    android:textSize="24sp"
-                    app:layout_constraintStart_toEndOf="@+id/imageView10"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/post_recycler"
+                android:id="@+id/results_recycler"
                 android:layout_width="match_parent"
-                android:layout_height="300dp" />
+                android:layout_height="310dp" />
+
         </LinearLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

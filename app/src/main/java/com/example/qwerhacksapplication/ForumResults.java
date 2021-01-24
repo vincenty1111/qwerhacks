@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.SearchView;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -21,29 +22,25 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 import java.util.Map;
 
-public class ForumActivity extends AppCompatActivity {
+public class ForumResults extends AppCompatActivity {
     private DocumentReference reff;
     private PostRecyclerViewAdapter.RecyclerViewClickListener listener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forum);
+        setContentView(R.layout.activity_forum_results);
+
+        Intent intent = getIntent();
         createNaviBar();
-        SearchView searchbar = findViewById(R.id.forum_searchbar);
-        ImageView  suppsun = findViewById(R.id.suppsun_tag);
-        suppsun.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ForumActivity.this, ForumResults.class);
-                intent.putExtra("QUERY", "suppsun");
-                startActivity(intent);
-            }
-        });
+        final String query = intent.getStringExtra("QUERY");
+        TextView searchTitle = findViewById(R.id.results_title);
+        searchTitle.setText("Search Results for "+ query);
+        SearchView searchbar = findViewById(R.id.results_searchbar);
         searchbar.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
-                Intent intent = new Intent (ForumActivity.this, ForumResults.class);
+                Intent intent = new Intent (ForumResults.this, ForumResults.class);
                 intent.putExtra("QUERY", s);
                 startActivity(intent);
                 return false;
@@ -52,6 +49,15 @@ public class ForumActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextChange(String s) {
                 return false;
+            }
+        });
+        ImageView suppsun = findViewById(R.id.suppsun_tag);
+        suppsun.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ForumResults.this, ForumResults.class);
+                intent.putExtra("QUERY", "suppsun");
+                startActivity(intent);
             }
         });
         reff = FirebaseFirestore.getInstance().collection("SafeSpace").document("0");
@@ -64,32 +70,32 @@ public class ForumActivity extends AppCompatActivity {
                     ArrayList<String> views = new ArrayList<>();
                     ArrayList<String> numAns = new ArrayList<>();
                     Map<String, Object> data = documentSnapshot.getData();
-                    int counter = 0;
                     for (String key: data.keySet()) {
-                        if (counter > 2) {
-                            break;
+                        Map<String, Object> post_info = (Map<String, Object>) data.get(key);
+                        ArrayList<String> tags = (ArrayList<String>) post_info.get("tags");
+                        for (int i = 0; i < tags.size(); i++) {
+                            if (tags.get(i).contains(query)) {
+                                questions.add(key);
+                                answers.add((String) post_info.get("topanswer"));
+                                numAns.add((String) post_info.get("answers"));
+                                views.add((String) post_info.get("views"));
+                                break;
+                            }
                         }
-                        counter++;
-                        questions.add(key);
-                        Map<String, Object> postData = (Map<String, Object>) data.get(key);
-                        answers.add((String) postData.get("topanswer"));
-                        views.add((String)postData.get("views"));
-                        numAns.add((String)postData.get("answers"));
                     }
                     listener = new PostRecyclerViewAdapter.RecyclerViewClickListener() {
                         @Override
                         public void onClick(View v, int pos) {
                         }
                     };
-                    PostRecyclerViewAdapter adapter = new PostRecyclerViewAdapter(ForumActivity.this, questions, answers, numAns, views, listener);
-                    RecyclerView post = findViewById(R.id.post_recycler);
-                    post.setLayoutManager(new LinearLayoutManager(ForumActivity.this, LinearLayoutManager.VERTICAL,
+                    PostRecyclerViewAdapter adapter = new PostRecyclerViewAdapter(ForumResults.this, questions, answers, numAns, views, listener);
+                    RecyclerView post = findViewById(R.id.results_recycler);
+                    post.setLayoutManager(new LinearLayoutManager(ForumResults.this, LinearLayoutManager.VERTICAL,
                             false));
                     post.setAdapter(adapter);
                 }
             }
         });
-
     }
     private void createNaviBar() {
         BottomNavigationView bottomNav = findViewById(R.id.bottomNav);
@@ -104,6 +110,9 @@ public class ForumActivity extends AppCompatActivity {
                         overridePendingTransition(0, 0);
                         return true;
                     case R.id.botnav_forum:
+                        Intent intent2 = new Intent(getApplicationContext(), ForumActivity.class);
+                        startActivity(intent2);
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.botnav_inspiro:

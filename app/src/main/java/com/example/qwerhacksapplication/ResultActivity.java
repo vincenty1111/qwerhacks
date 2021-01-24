@@ -58,6 +58,11 @@ public class ResultActivity extends AppCompatActivity {
                         startActivity(intent);
                         overridePendingTransition(0, 0);
                         return true;
+                    case R.id.botnav_profile:
+                        Intent intent3 = new Intent(getApplicationContext(), ProfileActivity.class);
+                        startActivity(intent3);
+                        overridePendingTransition(0, 0);
+                        return true;
                 }
                 return false;
             }

@@ -14,7 +14,7 @@
 
     <item
         android:id="@+id/botnav_inspiro"
-        android:icon="@android:drawable/sym_action_call"
+        android:icon="@drawable/queerhub"
         android:title="QueerHub" />
     <item
         android:id="@+id/botnav_profile"

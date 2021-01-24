@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     android:orientation="horizontal"
     tools:context=".InspoHubActivity">
 
@@ -33,15 +34,52 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp">
+                android:layout_height="150dp">
 
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="36dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/queerhub" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="36dp"
+                    android:fontFamily="@font/suez_one"
+                    android:text="QueerHub"
+                    android:textColor="#FFFFFF"
+                    android:textSize="36sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/varela_round"
+                    android:text="Get inspired with fresh content celebrating the community."
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintStart_toEndOf="@+id/imageView4"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/TVtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/suez_one"
+                android:paddingLeft="10dp"
                 android:text="TV Shows/Movies"
+                android:textColor="#FFFFFF"
                 android:textSize="28sp" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -57,7 +95,10 @@
                 android:id="@+id/musicTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/suez_one"
+                android:paddingLeft="10dp"
                 android:text="Music"
+                android:textColor="#FFFFFF"
                 android:textSize="28sp" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -71,7 +112,10 @@
                 android:id="@+id/newsTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/suez_one"
+                android:paddingLeft="10dp"
                 android:text="News"
+                android:textColor="#FFFFFF"
                 android:textSize="28sp" />
 
             <androidx.recyclerview.widget.RecyclerView

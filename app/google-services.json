@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "431673209190",
+    "project_id": "qwerhacks-b74fc",
+    "storage_bucket": "qwerhacks-b74fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431673209190:android:4e0c5fc4e39cc7986ed8a7",
+        "android_client_info": {
+          "package_name": "com.example.qwerhacksapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "431673209190-5f2ear5h8oi8batc94464b4bc14akfcg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.qwerhacksapplication",
+            "certificate_hash": "2c69819ca7c2bc1fb8e63e49061cdfd3fb0c26da"
+          }
+        },
+        {
+          "client_id": "431673209190-u9r75sdvihgi4uh6fgpk9lu3uql9ioo6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBb3pGbDeXi_SqpDZHuk_Bbi1EOupdNnDc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "431673209190-u9r75sdvihgi4uh6fgpk9lu3uql9ioo6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

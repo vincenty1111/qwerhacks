@@ -9,12 +9,30 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.Map;
 
 public class TriviaActivity extends AppCompatActivity {
+    private DocumentReference reff;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        reff = FirebaseFirestore.getInstance().collection("Questions").document("0");
+        reff.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if (documentSnapshot.exists()) {
+                    Map<String, Object> info = documentSnapshot.getData();
+                    long test = (long) info.get("answer");
+                    System.out.println(test);
+                }
+            }
+        });
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trivia);
         createNaviBar();

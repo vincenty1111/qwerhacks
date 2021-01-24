@@ -4,27 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TriviaActivity">
+    tools:context=".ForumActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="412dp"
         android:layout_height="82dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="591dp"
         android:background="#DAD9D9"
         app:labelVisibilityMode="labeled"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="348dp"
-        android:text="Trivia"
+        android:layout_marginStart="217dp"
+        android:layout_marginTop="186dp"
+        android:text="Forum"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

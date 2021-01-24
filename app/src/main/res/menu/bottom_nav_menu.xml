@@ -3,19 +3,19 @@
 <!--    android:icon="@drawable/ic_home"-->
 
     <item
-        android:id="@+id/botnav_home"
-        android:icon="@android:drawable/btn_star"
-        android:title="Home" />
-
-    <item
         android:id="@+id/botnav_trivia"
-        android:icon="@android:drawable/presence_away"
+        android:icon="@android:drawable/btn_star"
         android:title="Trivia" />
 
     <item
-        android:id="@+id/botnav_profile"
+        android:id="@+id/botnav_forum"
+        android:icon="@android:drawable/presence_away"
+        android:title="Forum" />
+
+    <item
+        android:id="@+id/botnav_inspiro"
         android:icon="@android:drawable/sym_action_call"
-        android:title="Profile" />
+        android:title="Inspo Hub" />
 
 
 </menu>

@@ -24,16 +24,15 @@ public class TriviaActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.botnav_home:
-                        Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+                    case R.id.botnav_trivia:
+                        return true;
+                    case R.id.botnav_forum:
+                        Intent intent1 = new Intent(getApplicationContext(), ForumActivity.class);
                         startActivity(intent1);
                         overridePendingTransition(0, 0);
                         return true;
-                    case R.id.botnav_trivia:
-                        return true;
-
-                    case R.id.botnav_profile:
-                        Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                    case R.id.botnav_inspiro:
+                        Intent intent = new Intent(getApplicationContext(), InspoHubActivity.class);
                         startActivity(intent);
                         overridePendingTransition(0, 0);
                         return true;

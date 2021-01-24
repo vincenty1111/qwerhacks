@@ -36,7 +36,8 @@
         android:layout_marginTop="316dp"
         android:text="Ans1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <Button
         android:id="@+id/Ans2"
@@ -46,7 +47,8 @@
         android:layout_marginTop="416dp"
         android:text="Ans2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <Button
         android:id="@+id/Ans3"
@@ -56,7 +58,8 @@
         android:layout_marginTop="316dp"
         android:text="Ans3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <Button
         android:id="@+id/Ans4"
@@ -66,7 +69,8 @@
         android:layout_marginTop="416dp"
         android:text="Ans4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+       />
 
     <Button
         android:id="@+id/submit"

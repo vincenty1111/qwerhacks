@@ -6,35 +6,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import static com.example.qwerhacksapplication.TriviaActivity.counter_var;
-
-public class ResultActivity extends AppCompatActivity {
+public class EndActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent intent = getIntent();
-        final int counter = intent.getIntExtra(counter_var, 0);
-        setContentView(R.layout.activity_result);
-        createNaviBar();
-        Button button = (Button) findViewById(R.id.next_question);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (counter == 3) {
-                    Intent final_intent = new Intent(ResultActivity.this, EndActivity.class);
-                    startActivity(final_intent);
-                    return;
-                }
-                Intent intent = new Intent(ResultActivity.this, TriviaActivity.class);
-                intent.putExtra(counter_var, counter);
-                startActivity(intent);
-            }
-        });
+        setContentView(R.layout.activity_end);
     }
     private void createNaviBar() {
         BottomNavigationView bottomNav = findViewById(R.id.bottomNav);

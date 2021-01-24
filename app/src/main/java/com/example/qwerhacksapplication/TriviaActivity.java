@@ -75,7 +75,7 @@ public class TriviaActivity extends AppCompatActivity {
                 Button ans3_butt = TriviaActivity.this.findViewById(R.id.Ans3);
                 Button ans4_butt = TriviaActivity.this.findViewById(R.id.Ans4);
 
-                ans1_butt.setBackgroundColor(Color.parseColor("#A4C639"));
+                ans1_butt.setBackgroundColor(Color.parseColor("#B1D7C2"));
                 ans2_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
                 ans3_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
                 ans4_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
@@ -91,7 +91,7 @@ public class TriviaActivity extends AppCompatActivity {
                 Button ans4_butt = TriviaActivity.this.findViewById(R.id.Ans4);
 
                 ans1_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
-                ans2_butt.setBackgroundColor(Color.parseColor("#A4C639"));
+                ans2_butt.setBackgroundColor(Color.parseColor("#B1D7C2"));
                 ans3_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
                 ans4_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
             }
@@ -106,7 +106,7 @@ public class TriviaActivity extends AppCompatActivity {
 
                 ans1_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
                 ans2_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
-                ans3_butt.setBackgroundColor(Color.parseColor("#A4C639"));
+                ans3_butt.setBackgroundColor(Color.parseColor("#B1D7C2"));
                 ans4_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
             }
         });
@@ -121,7 +121,7 @@ public class TriviaActivity extends AppCompatActivity {
                 ans1_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
                 ans2_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
                 ans3_butt.setBackgroundColor(Color.parseColor("#D5D2D2"));
-                ans4_butt.setBackgroundColor(Color.parseColor("#A4C639"));
+                ans4_butt.setBackgroundColor(Color.parseColor("#B1D7C2"));
             }
         });
         System.out.println(choice);

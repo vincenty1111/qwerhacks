@@ -2,49 +2,110 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context=".ResultActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="412dp"
         android:layout_height="82dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="591dp"
         android:background="#DAD9D9"
         app:labelVisibilityMode="labeled"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/congrats"
+        app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
     <Button
         android:id="@+id/congrats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="532dp"
         android:text="Next Question"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:id="@+id/right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="180dp"
-        android:text="CORRECT"
-        android:visibility="invisible"
+        android:id="@+id/quest1"
+        android:layout_width="204dp"
+        android:layout_height="171dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="72dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:background = "@drawable/rectangle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:id="@+id/wrong"
+        android:id="@+id/funfact"
+        android:layout_width="149dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="472dp"
+        android:background="@drawable/rectangle"
+        android:gravity="center"
+        android:text="funfact"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/percent"
+        android:layout_width="126dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/rectangle"
+        android:gravity="center"
+        android:text="percent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Ans1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="180dp"
-        android:text="INCORRECT"
-        android:visibility="invisible"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="316dp"
+        android:background="#D5D2D2"
+        android:text="Ans1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Ans2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="416dp"
+        android:background="#D5D2D2"
+        android:text="Ans2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Ans3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="272dp"
+        android:layout_marginTop="316dp"
+        android:background="#D5D2D2"
+        android:text="Ans3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Ans4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="272dp"
+        android:layout_marginTop="416dp"
+        android:background="#D5D2D2"
+        android:text="Ans4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

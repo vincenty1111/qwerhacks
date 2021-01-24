@@ -53,15 +53,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(ViewHolder holder, final int position) {
         System.out.println(mImageUrls.get(position));
         Glide.with(mContext).load(mImageUrls.get(position))
-                    .apply(new RequestOptions().override(200, 200)).into(holder.image);
+                    .apply(new RequestOptions().override(300, 600)).into(holder.image);
 
         holder.name.setText(mTitles.get(position));
-        if (mPlatform.get(position).equals("spotify")) {
-            Glide.with(mContext).load(mImageUrls.get(position))
-                    .apply(new RequestOptions().override(200, 200)).into(holder.platform);
-        } else {
-            Glide.with(mContext).load(mImageUrls.get(position))
-                    .apply(new RequestOptions().override(200, 200)).into(holder.platform);
+        if (!mPlatform.get(position).equals("")) {
+            Glide.with(mContext).load(mPlatform.get(position))
+                    .apply(new RequestOptions().override(40, 40)).into(holder.platform);
         }
 //        holder.id.setText(""+mIds.get(position));
 

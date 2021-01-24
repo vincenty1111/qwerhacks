@@ -30,7 +30,7 @@ public class IntroActivity extends AppCompatActivity {
             }
         });
         Button hub = findViewById(R.id.QueerHub);
-        safe.setOnClickListener(new View.OnClickListener() {
+        hub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), InspoHubActivity.class);
